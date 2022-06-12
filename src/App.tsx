@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import Search from './Search';
 import './styles.css';
-import Weather from './Weather';
+import WeatherWidget from './WeatherWidget';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Simple Weather App</h1>
-      
+    <div className='App'>
+      <Search />
+      <WeatherWidget />
     </div>
   );
 }

@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 type Props = {
-  temp: Number,
+    weather: string,
+    weatherIconId: string,
 }
 
 const Weather = (props: Props) => {
-
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [temp, setTemp] = useState<Number>();
-
-
   return (
-      <div>
-        <h2>{props.temp.toString()}</h2>
-      </div>
+    <div className='weather'>
+        <img className='weather__icon' src={props.weatherIconId} alt={props.weather + ' icon'} />
+        <p className='weather__text'>{props.weather}</p>
+    </div>
   )
 }
 
