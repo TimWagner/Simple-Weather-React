@@ -5,14 +5,14 @@ import Weather from './Weather';
 import Wind from './Wind';
 
 type Props = {
-
+  coords: [number, number],
 }
 
 const WeatherWidget = (props: Props) => {
 
   return (
       <div className='weather-widget'>
-          <Temperature temp={23} feelsLikeTemp={22} city={'Mainz'} />
+          <Temperature temp={23} feelsLikeTemp={22} city={"Mainz"} />
 
           <Weather weather={'clear sky'} weatherIconId={'http://openweathermap.org/img/wn/01d@2x.png'} />
 

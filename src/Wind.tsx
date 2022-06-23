@@ -9,9 +9,7 @@ type Props = {
 const Wind = (props: Props) => {
   return (
     <div className="wind">
-        <p>
-            <FaWind className="wind__icon" />{props.windSpeed.toString()} {props.unit.toString()}
-        </p>
+      <FaWind className="wind__icon" />{props.windSpeed.toString()} {props.unit.toString()}
     </div>
   )
 }

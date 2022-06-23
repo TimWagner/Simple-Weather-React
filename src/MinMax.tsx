@@ -8,15 +8,15 @@ type Props = {
 
 const MinMax = (props: Props) => {
   return (
-    <div className="min-max">
-        <p className="min-max__min">
+    <>
+        <div className="min-max__min">
             <FaArrowDown className="min-max__icon" />{props.minTemp.toString()}
-        </p>
+        </div>
 
-        <p className="min-max__max">
+        <div className="min-max__max">
             <FaArrowUp className="min-max__icon" />{props.maxTemp.toString()}
-        </p>
-    </div>
+        </div>
+    </>
   )
 }
 

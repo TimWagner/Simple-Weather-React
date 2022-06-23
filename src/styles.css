@@ -7,10 +7,10 @@ body {
 }
 
 :root {
-    --max-width: 600px;
+    --max-width: 550px;
 
-    --color-main: #DBD500;
-    --color-main-dark: #8F8A00;
+    --color-main: #EEEB87;
+    --color-main-dark: #A8A663;
     --color-accent: #5800DB;
 }
 
@@ -20,12 +20,16 @@ body {
     width: min(90%, var(--max-width));
 }
 
+/* =============================
+        SEARCH
+   ============================= */
+
 .search {
     width: 100%;
     margin: 2rem auto;
     display: flex;
     justify-content: center;
-    position: relative;
+    gap: 2em;
 }
 
 .search__field {
@@ -60,13 +64,16 @@ body {
 }
 
 .search__unit {
-    position: absolute;
-    right: 0;
     background: black;
     color: white;
     padding: 0.3em;
     border: 3px solid black;
+    font-weight: 900;
 }
+
+/* =============================
+        WIDGET
+   ============================= */
 
 .weather-widget {
     padding: 2.5rem 4rem 0.5rem 4rem;
@@ -74,16 +81,14 @@ body {
     margin-right: 0;
     background: var(--color-main);
     border-radius: 0.7em;
-    box-shadow: 10px 10px 0 0 var(--color-main-dark);
+    box-shadow: 8px 8px 0 0 var(--color-main-dark);
 
     display: grid;
-    grid-template-areas: 
-    "temp weather"
-    "details details";
+    grid-template-columns: 1fr 1fr;
 }
 
 .temp-box {
-    grid-area: temp;
+    
 }
 
 .temp-box__city {
@@ -104,21 +109,20 @@ body {
 }
 
 .weather {
-    grid-area: weather;
     position: relative;
+    align-self: start;
+    text-align: center;
+    transform: translateY(-1rem)
 }
 
 .weather__icon {
     display: block;
-    position: absolute;
-    top: -5rem;
-    right: 2rem;
+    margin: 0 auto;
 }
 
 .weather__text {
     font-weight: 900;
     font-size: 2rem;
-    margin-top: 2rem;
 }
 
 .min-max {
@@ -130,12 +134,13 @@ body {
 }
 
 .details {
-    grid-area: details;
+    grid-column: -3 / -1;
     display: flex;
-    gap: 1em;
-    justify-content: space-between;
+    gap: 1.5rem;
+    justify-content: center;
     margin-top: 2.5rem;
     font-weight: 900;
+    align-self: end;
 }
 
 .details svg {
